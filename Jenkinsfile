@@ -4,7 +4,7 @@ pipeline {
         stage("Build") {
             steps {
                 sh 'echo hi there'
-                sh "php artisan optimize:clear";
+                sh "php artisan optimize:clear"
             }
         }        
         stage("Acceptance test codeception and deploy") {
