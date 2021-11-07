@@ -1,31 +1,13 @@
 pipeline {
     agent any
     environment {
-        DEVOPS_COMMON_USERNAME = credentials("jenkins-devops-common-username")
-        DEVOPS_COMMON_PASSWORD = credentials("jenkins-devops-common-password")
+        EXAMPLE_CREDS = credentials('example-credentials-id')
     }
     stages {
-        stage("Composer Init") {
+        stage('Example') {
             steps {
-                sh 'composer install'  
-                sh "echo $DEVOPS_COMMON_USERNAME"
-            }
-        }        
-        stage("Build") {
-            steps {
-                sh 'echo hi there'
-                sh "php artisan optimize:clear"
-            }
-        }        
-        stage("Acceptance test codeception and deploy") {
-            steps {
-                sh "echo Everything woking fine so nice."
-            }
-            post {
-                always {
-                    sh "echo hi there!"
-                    sh "echo Good Morning"
-                }
+                /* WRONG! */
+                sh("curl -u ${EXAMPLE_CREDS_USR}:${EXAMPLE_CREDS_PSW} https://example.com/")
             }
         }
     }
