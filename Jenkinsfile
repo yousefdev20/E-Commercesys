@@ -1,7 +1,6 @@
 pipeline {
     environment {
-            DEVOPS_COMMON_USERNAME = credentials("jenkins-devops-common-username")
-            DEVOPS_COMMON_PASSWORD = credentials("jenkins-devops-common-password")
+        DEVOPS_COMMON_USERNAME = credentials("jenkins-devops-common-username")            
     }
     agent any    
     stages {        
