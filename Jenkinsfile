@@ -1,7 +1,4 @@
-pipeline {
-    environment {
-        DEVOPS_COMMON_USERNAME = credentials("jenkins-devops-common-username")            
-    }
+pipeline {    
     agent any    
     stages {        
         stage("Composer Init") {
