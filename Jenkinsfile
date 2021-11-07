@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    stages {
-        environment {
+    environment {
             DEVOPS_COMMON_USERNAME = credentials("jenkins-devops-common-username")
             DEVOPS_COMMON_PASSWORD = credentials("jenkins-devops-common-password")
-        }
+    }
+    stages {        
         stage("Composer Init") {
             steps {
                 sh 'composer install'
