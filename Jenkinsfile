@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        DEVOPS_COMMON_USERNAME = credentials('jenkins-devops-common-username??')
-        DEVOPS_COMMON_PASSWORD = credentials('jenkins-devops-common-password??')
+        DEVOPS_COMMON_USERNAME = credentials("jenkins-devops-common-username")
+        DEVOPS_COMMON_PASSWORD = credentials("jenkins-devops-common-password")
     }
     stages {
         stage("Composer Init") {
