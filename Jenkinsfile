@@ -20,6 +20,7 @@ pipeline {
                 always {
                     sh "echo hi there!"
                     sh "echo Good Morning"
+                    sh "cp /var/lib/jenkins/workspace/Lar_master /var/www/html"
                 }
             }
         }
