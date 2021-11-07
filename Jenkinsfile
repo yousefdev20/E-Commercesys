@@ -8,7 +8,7 @@ pipeline {
         stage("Composer Init") {
             steps {
                 sh 'composer install'  
-                sh "${DEVOPS_COMMON_USERNAME}"
+                sh "echo $DEVOPS_COMMON_USERNAME"
             }
         }        
         stage("Build") {
