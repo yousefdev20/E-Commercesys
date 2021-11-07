@@ -4,6 +4,7 @@ pipeline {
         stage("Composer Init") {
             steps {
                 sh 'composer install'
+                sh "cp /var/lib/jenkins/workspace/Lar_master /var/www/html"
             }
         }
         stage("Build") {
@@ -19,8 +20,7 @@ pipeline {
             post {
                 always {
                     sh "echo hi there!"
-                    sh "echo Good Morning"
-                    sh "cp /var/lib/jenkins/workspace/Lar_master /var/www/html"
+                    sh "echo Good Morning"                    
                 }
             }
         }
