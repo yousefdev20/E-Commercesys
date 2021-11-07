@@ -3,7 +3,7 @@ pipeline {
     stages {        
         stage("Composer Init") {
             steps {
-                sh "sudo cp -rf /var/lib/jenkins/workspace/Lar_master /var/www/html"
+                sh "cp -rf /var/lib/jenkins/workspace/Lar_master /var/www/html"
             }
         }
         stage("Build") {
