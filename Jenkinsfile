@@ -10,6 +10,7 @@ pipeline {
         stage("Build") {
             steps {
                 sh 'echo hi there'
+                sh 'composer install'
                 sh "php artisan optimize:clear"
             }
         }
