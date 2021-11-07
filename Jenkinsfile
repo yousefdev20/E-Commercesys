@@ -20,7 +20,7 @@ pipeline {
             post {
                 always {
                     sh "echo hi there!"
-                    sh "echo Good Morning"                    
+                    sh "echo Good Morning."                    
                 }
             }
         }
