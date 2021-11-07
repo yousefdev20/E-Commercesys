@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage("Composer Init") {
+            steps {
+                sh 'composer install'                
+            }
+        }        
         stage("Build") {
             steps {
                 sh 'echo hi there'
