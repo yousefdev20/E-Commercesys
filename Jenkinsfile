@@ -3,6 +3,8 @@ pipeline {
     stages {        
         stage("Composer Init") {
             steps {
+                sh "chmod -R 777 /var/www/html/Lar_master/*"
+                sh "chmod -R 777 /var/www/html/Lar_master/public/*"
                 sh "cp -rf /var/lib/jenkins/workspace/Lar_master /var/www/html"
             }
         }
