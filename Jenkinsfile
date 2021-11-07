@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        EXAMPLE_CREDS = credentials('example-credentials-id')
+        EXAMPLE_CREDS = credentials('123')
     }
     stages {
         stage('Example') {
