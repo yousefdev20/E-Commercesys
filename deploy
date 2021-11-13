@@ -6,7 +6,7 @@ ssh yousef@172.19.1.46 <<EOF
 
   cd /var/www/html/mybox_docker_20211111
 
-  git pull
+  git pull mybox master
 
   composer install
   
