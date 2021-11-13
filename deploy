@@ -1,0 +1,17 @@
+#!/bin/sh
+
+
+
+ssh yousef@172.19.1.46 <<EOF
+
+  cd /var/www/html/mybox_docker_20211111
+
+  git pull
+
+  composer install
+  
+  touch yousef.yousef  
+
+  exit
+
+EOF
